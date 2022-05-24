@@ -1,10 +1,19 @@
 import React from 'react';
 
 class App extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            name: ''
+        }
+    }
     render(){
 
         return (
-                <h1>Hello React Skeleton</h1>
+            <div>
+                <button onClick={() => {this.setState({name: 'Velopert'})}}>Click Me</button>
+                <h1>Hello!!!! {this.state.name}</h1>
+            </div>
         );
     }
 }
